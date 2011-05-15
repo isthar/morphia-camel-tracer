@@ -1,0 +1,6 @@
+#surefire
+#Sun May 15 14:20:46 CEST 2011
+user.dir=C\:\\Users\\tneuboeck\\workspace\\MorphiaCamelTracer
+maven.repo.local=C\:\\Users\\tneuboeck\\.m2\\repository
+localRepository=C\:\\Users\\tneuboeck\\.m2\\repository
+basedir=C\:\\Users\\tneuboeck\\workspace\\MorphiaCamelTracer

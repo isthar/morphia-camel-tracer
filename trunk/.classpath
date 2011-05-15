@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/camel/camel-core/2.6.0/camel-core-2.6.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/fusesource/commonman/commons-management/1.0/commons-management-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/mongodb/Mongo/mongo/2.6/mongo-2.6.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/code/morphia/morphia/0.99/morphia-0.99.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tneuboeck/_home/dev/java/jdk1.6.0_11/lib/tools.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/camel-core-2.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/mongo-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/morphia-0.99.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
