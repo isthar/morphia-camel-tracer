@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<project name="morphiaCamelTracer" basedir="." default="jar">
+
+	<property name="build" value="target"/>
+	<property name="m2-rep" value="./../../.m2/repository/org/apache/camel/camel-morphia-tracer/1.0.0"/>
+	<property name="prom-lib" value="./../ProM/lib"/>
+	
+	<property file="build.properties"/>
+	
+	<target name="clean">
+		<delete dir="${build}"/>
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${build}"/>
+	</target>	
+	
+	<target name="compile" depends="init">
+		<!-- Compile the java code -->
+		<javac srcdir="src\main\java" destdir="${build}">
+			<classpath>
+				<pathelement location="${env.LIB}/camel-core-2.6.0.jar"/>
+				<pathelement location="${env.LIB}/mongo-2.4.jar"/>
+				<pathelement location="${env.LIB}/morphia-0.99.jar"/>
+			</classpath>
+		</javac>
+	</target>	
+	
+	<target name="jar" depends="compile">
+		<!-- Build the jar file -->
+		<jar basedir="${build}" destfile="${build}/camel-morphia-tracer-1.0.0.jar"/>
+		<!-- <copy file="${build}/camel-morphia-tracer-1.0.0.jar" tofile="${m2-rep}/camel-morphia-tracer-1.0.0.jar" overwrite="true" />-->
+		<!-- <copy file="${build}/camel-morphia-tracer-1.0.0.jar" tofile="${prom-lib}/camel-morphia-tracer-1.0.0.jar" overwrite="true" />-->
+		<copy file="${build}/camel-morphia-tracer-1.0.0.jar" tofile="${m2-rep}/camel-morphia-tracer-1.0.0.jar" overwrite="true" />
+		<copy file="${build}/camel-morphia-tracer-1.0.0.jar" tofile="${prom-lib}/camel-morphia-tracer-1.0.0.jar" overwrite="true" />
+	</target>
+	
+</project>
