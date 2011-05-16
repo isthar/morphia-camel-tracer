@@ -16,7 +16,7 @@
 	<scm>
     <connection>scm:svn:http://morphia-camel-tracer.googlecode.com/svn/trunk</connection>
     <developerConnection>scm:svn:https://morphia-camel-tracer.googlecode.com/svn/trunk</developerConnection>
-        <url>http://morphia-camel-tracer.googlecode.com/svn</url>
+    <url>http://morphia-camel-tracer.googlecode.com/svn</url>
   </scm>
 
 	<repositories>        
@@ -24,7 +24,11 @@
 			<id>maven2-repository.dev.java.net</id>            
 			<name>Java.net Repository for Maven</name>            
 			<url>http://download.java.net/maven/2/</url>        
-		</repository>    
+		</repository>
+		<repository>
+  		 		<id>morphia-googlecode</id>              
+  		 		<url>http://morphia.googlecode.com/svn/mavenrepo</url>
+  	</repository>     
 	</repositories>
 
 	<distributionManagement>     
@@ -83,15 +87,15 @@
     </dependency>
 
     <dependency>
-       <groupId>com.mongodb.Mongo</groupId>
-       <artifactId>mongo</artifactId>
-       <version>2.6</version>
-    </dependency>
-        
-    <dependency>
-       <groupId>com.google.code.morphia</groupId>
-       <artifactId>morphia</artifactId>
-       <version>0.99</version>
+		    <groupId>org.mongodb</groupId>
+		    <artifactId>mongo-java-driver</artifactId>
+		    <version>2.5.3</version>
+		</dependency>
+     
+    <dependency>         
+        	<groupId>com.google.code.morphia</groupId>         
+        	<artifactId>morphia</artifactId>         
+        	<version>0.99</version> 
     </dependency>
 
 
