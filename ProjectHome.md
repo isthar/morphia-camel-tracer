@@ -1,0 +1,1 @@
+Apache Camel Tracer implementation using MongoDB to store the event-log and the morphia framework to manage the data access
